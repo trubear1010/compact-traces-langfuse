@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Compact Traces for Langfuse",
+    "version": "1.0",
+    "description": "Sets JSON view in Langfuse sessions & traces.",
+    "permissions": ["activeTab", "scripting"],
+    "host_permissions": ["https://us.cloud.langfuse.com/*"],
+    "background": {
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://us.cloud.langfuse.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
